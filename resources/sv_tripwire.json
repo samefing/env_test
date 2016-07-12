@@ -1,0 +1,6 @@
+{
+   "id": "sv_tripwire",
+   "production": {"password": "xxx"},
+   "development": { "password": "yyy"},
+   "pre-production": { "password": "zzz"}
+}
