@@ -1,3 +1,6 @@
+serviceaccount = data_bag_item( 'serviceaccounts', 'sv_tripwire' )
+
+
 directory 'c:\temp' do
 	action :create
 end
@@ -20,4 +23,10 @@ end
 
 file 'C:\temp\test2.txt' do
 	content "#{install_path}"
+end
+
+file 'environment_password' do
+	path  'c:\temp\environmentpassword.txt'
+	content serviceaccount[node.chef_environment]['password']
+	action :create
 end
