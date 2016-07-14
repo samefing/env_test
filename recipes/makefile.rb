@@ -30,3 +30,10 @@ file 'environment_password' do
 	content serviceaccount[node.chef_environment]['password']
 	action :create
 end
+
+file '/tmp/something do
+  owner 'root'
+  group 'root'
+  mode 00755
+  action :create
+end
